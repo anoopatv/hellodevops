@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/<your-username>/hello-devops.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 sh '''
